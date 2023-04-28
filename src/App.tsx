@@ -1,10 +1,18 @@
 import { FC } from 'react'
-import { Typography } from "@mui/material";
+import { HashRouter } from 'react-router-dom'
+import { lightTheme } from './theme'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { RoutesNavigation } from './router'
+
+
 const App: FC = () => {
     return (
-        <Typography>
-            CRM
-        </Typography>
+        <ThemeProvider theme={ lightTheme } > 
+            <HashRouter>
+                <CssBaseline/>
+                <RoutesNavigation/>
+            </HashRouter>
+        </ThemeProvider>
     )
 }
 
