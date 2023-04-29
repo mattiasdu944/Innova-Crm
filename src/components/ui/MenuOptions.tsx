@@ -2,16 +2,27 @@ import { FC } from 'react'
 import { IMenu } from '../../interfaces'
 
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { useNavigate } from 'react-router-dom';
 
 interface Props{
     options: IMenu[];
 }
 
 export const MenuOptions: FC<Props> = ({ options }) => {
+
+
+    const navigate = useNavigate();
+
+    const handleNavigation = ( term: string ) => {
+        navigate(`${ term }`);
+
+    }
+
+
     return (
         <List>
             {options.map( item  => (
-                <ListItem key={ item.path } disablePadding>
+                <ListItem key={ item.path } onClick={ () => handleNavigation( item.path ) } disablePadding>
                     <ListItemButton
                         sx={{
                             mb:'.5rem',
