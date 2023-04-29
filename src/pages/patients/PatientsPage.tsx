@@ -1,7 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
 
-export const PatientsPage = () => {
+import { Typography } from '@mui/material'
+import { ListUsers } from '../../components'
+
+export const PatientsPage: FC = () => {
     return (
-        <div>PatientsPage</div>
+        <>
+            <Typography variant='h1' mb={5}>Gestiona tus pacientes</Typography>
+            
+            <ListUsers/>
+        </>
     )
 }

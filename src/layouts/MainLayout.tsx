@@ -19,7 +19,7 @@ export const MainLayout: FC = () => {
             <SideMenu/>
 
             {/* Pages */}
-            <Box component='main' width='100%'>
+            <Box component='main' width='100%' padding='1rem 0'>
                 <Outlet/>
             </Box>
         </Box>
