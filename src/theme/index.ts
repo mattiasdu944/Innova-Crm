@@ -26,7 +26,8 @@ export const lightTheme = createTheme({
             main: '#404BDA'
         },
         secondary: {
-            main: '#363853'
+            main: '#282945',
+            dark: '#21233f'
         },
         text:{
             primary: '#f3f3f3',
@@ -34,22 +35,15 @@ export const lightTheme = createTheme({
         }
     },
     components: {
-        MuiLink: {
+        MuiDrawer:{
             defaultProps: {
-                underline: 'none',
-
+                variant: 'permanent',
+                color: '#363853'
             },
-        },
-        MuiAppBar: {
-            defaultProps: {
-                elevation: 0,
-                position: 'fixed',
-            },
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'white',
-                    height: 60
-                },
+            styleOverrides:{
+                root:{
+                    display:'block'
+                }
             }
         },
 
@@ -91,6 +85,15 @@ export const lightTheme = createTheme({
             }
         },
 
+        MuiListItemButton:{
+            styleOverrides:{
+                root:{
+                    gap: '1.5rem',
+                    justifyContent:'start',
+                    padding:0
+                }
+            }
+        },
 
         MuiCard: {
             defaultProps: {

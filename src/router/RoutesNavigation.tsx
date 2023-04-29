@@ -17,8 +17,8 @@ export const RoutesNavigation: FC = () => {
                 {/* APP ROUTES */}
                 <Route path='/' element={ <MainLayout/> } >
                     <Route index element={ <DashboardPage/> } />
-                    <Route path='patients' element={ <PatientsPage/> } />
                     <Route path='employees' element={ <EmployeesPage/> } />
+                    <Route path='patients' element={ <PatientsPage/> } />
                     <Route path='quotes' element={ <QuotesPage/> } />
                 </Route>
             </Routes>
