@@ -73,6 +73,7 @@ export const lightTheme = createTheme({
                 root: {
                     textTransform: 'none',
                     borderRadius: 10,
+                    padding:'.75rem'
                 }
             }
         },
