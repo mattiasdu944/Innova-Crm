@@ -13,7 +13,7 @@ export const SideMenu: FC = () => {
                 flexDirection:'column',
                 width: 350, 
                 bgcolor:'secondary.main', 
-                minHeight:'100%',
+                height:'95vh',
                 padding: '1rem ',
                 borderRadius: '2rem',
                 boxShadow: '0px 5px 15px rgba(0,0,0,0.05)',

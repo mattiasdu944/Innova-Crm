@@ -9,7 +9,7 @@ export const MainLayout: FC = () => {
         <Box
             sx={{
                 display: 'flex',
-                minHeight: '100vh',
+                height: '100vh',
                 width: '100%',
                 padding: '1.5rem',
                 gap: '2rem'
@@ -19,7 +19,7 @@ export const MainLayout: FC = () => {
             <SideMenu/>
 
             {/* Pages */}
-            <Box component='main' width='100%' padding='1rem 0'>
+            <Box component='main' width='100%' padding='1rem 2rem 0 0' sx={{ overflowY:'scroll' }}> 
                 <Outlet/>
             </Box>
         </Box>

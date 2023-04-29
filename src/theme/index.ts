@@ -31,7 +31,7 @@ export const lightTheme = createTheme({
         },
         text:{
             primary: '#f3f3f3',
-            secondary:'f9f9fa'
+            secondary:'#f9f9fa'
         }
     },
     components: {
@@ -68,19 +68,11 @@ export const lightTheme = createTheme({
         MuiButton: {
             defaultProps: {
                 variant: 'contained',
-                size: 'small',
-                disableElevation: true,
-                color: 'info'
             },
             styleOverrides: {
                 root: {
                     textTransform: 'none',
-                    boxShadow: 'none',
                     borderRadius: 10,
-                    ":hover": {
-                        backgroundColor: 'rgba(0,0,0,0.05)',
-                        transition: 'all 0.3s ease-in-out'
-                    }
                 }
             }
         },
@@ -97,10 +89,12 @@ export const lightTheme = createTheme({
 
         MuiCard: {
             defaultProps: {
-                elevation: 0
+                elevation: 0,
+            
             },
             styleOverrides: {
                 root: {
+                    background:'#282945',
                     boxShadow: '0px 5px 5px rgba(0,0,0,0.05)',
                     borderRadius: '10px',
                 }
