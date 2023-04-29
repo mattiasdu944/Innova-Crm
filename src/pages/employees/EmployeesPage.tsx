@@ -1,7 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
 
-export const EmployeesPage = () => {
+import { Typography } from '@mui/material'
+import { ListUsers } from '../../components'
+
+export const EmployeesPage: FC = () => {
     return (
-        <div>EmployeesPage</div>
+        <>
+            <Typography variant='h1' mb={5}>Gestiona tus empleados</Typography>
+            
+            <ListUsers/>
+        </>
     )
 }
