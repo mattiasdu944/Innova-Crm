@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom'
 
 import { AuthLayout, MainLayout } from '../layouts';
-import { DashboardPage, EmployeesPage, LoginPage, PatientsPage, QuotesPage, RegisterPage } from '../pages';
+import { DashboardPage, EmployeesPage, LoginPage, PatientsPage, QuotePage, QuotesPage, RegisterPage } from '../pages';
 
 export const RoutesNavigation: FC = () => {
     return (
@@ -20,6 +20,7 @@ export const RoutesNavigation: FC = () => {
                     <Route path='employees' element={ <EmployeesPage/> } />
                     <Route path='patients' element={ <PatientsPage/> } />
                     <Route path='quotes' element={ <QuotesPage/> } />
+                    <Route path='quotes/:id' element={ <QuotePage/> } />
                 </Route>
             </Routes>
         </>
