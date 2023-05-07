@@ -13,8 +13,8 @@ export const QuotesPage: FC = () => {
             </Link>
             <Grid container spacing={3}>
                 {
-                    [1,2,3,4,5,6].map( () => (
-                        <CardQuote/>
+                    [1,2,3,4,5,6].map( (item, index) => (
+                        <CardQuote key={ index }/>
                     ))
                 }
             </Grid>

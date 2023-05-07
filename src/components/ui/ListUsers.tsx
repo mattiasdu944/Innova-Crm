@@ -1,14 +1,18 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import { IUser } from '../../interfaces/user';
 
 import { MdModeEditOutline, MdOutlineDeleteOutline } from "react-icons/md";
 import { Box, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
+import { UsersContext } from '../../context';
 
 interface Props{
-    patients?: IUser[];
+    users: IUser[];
 }
 
-export const ListUsers: FC<Props> = ({ patients }) => {
+export const ListUsers: FC<Props> = ({ users }) => {
+
+    const { deleteUser } = useContext(UsersContext);
+
     return (
         <>
             <TableContainer sx={{ backgroundColor: 'secondary.main', padding: '1rem 2rem', borderRadius: '1.5rem' }}>
@@ -23,24 +27,27 @@ export const ListUsers: FC<Props> = ({ patients }) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {[1, 2, 3, 4, 5, 6, 6, 7, 7, 8, 8].map((row, index) => (
+                        {users.map((user) => (
                             <TableRow
-                                key={index}
+                                key={user.id}
                                 sx={{ 'td, th': { border: 0, padding: '1.5rem 1' } }}
                             >
                                 <TableCell component="th" scope="row">
-                                    Mattias Alexandre Duarte Aparicio
+                                    {`${ user.name } ${ user.lastname }  `}
                                 </TableCell>
-                                <TableCell>mattias@correo.com</TableCell>
-                                <TableCell>7653217</TableCell>
-                                <TableCell>29 de Abril de 2000</TableCell>
+                                <TableCell>{ user.email }</TableCell>
+                                <TableCell>{ user.phone }</TableCell>
+                                <TableCell>{ user.bornDate }</TableCell>
                                 <TableCell>
                                     <Box display='flex' alignItems='center' justifyContent='center'>
                                         <IconButton sx={{ fontSize: '1.25rem', color: 'primary.main' }}>
                                             <MdModeEditOutline />
                                         </IconButton>
 
-                                        <IconButton sx={{ fontSize: '1.25rem', color: 'error.main' }}>
+                                        <IconButton 
+                                            sx={{ fontSize: '1.25rem', color: 'error.main' }}
+                                            onClick={ () => deleteUser(user.id!) }
+                                        >
                                             <MdOutlineDeleteOutline />
                                         </IconButton>
                                     </Box>

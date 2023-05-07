@@ -1,2 +1,2 @@
 export * from './NewPatientPage'
-export * from './PatientsPage'
+export * from './ClientsPage'

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom'
 
 import { AuthLayout, MainLayout } from '../layouts';
-import { DashboardPage, EmployeesPage, LoginPage, NewPatientPage, NewQuotePage, PatientsPage, QuotePage, QuotesPage, RegisterPage } from '../pages';
+import { DashboardPage, EmployeesPage, LoginPage, NewPatientPage, NewQuotePage, ClientsPage, QuotePage, QuotesPage, RegisterPage } from '../pages';
 
 export const RoutesNavigation: FC = () => {
     return (
@@ -20,8 +20,8 @@ export const RoutesNavigation: FC = () => {
                     <Route index element={ <DashboardPage/> } />
                     <Route path='employees' element={ <EmployeesPage/> } />
 
-                    <Route path='patients' element={ <PatientsPage/> } />
-                    <Route path='patients/new' element={ <NewPatientPage/> } />
+                    <Route path='clients' element={ <ClientsPage/> } />
+                    <Route path='clients/new' element={ <NewPatientPage/> } />
                     
                     <Route path='quotes' element={ <QuotesPage/> } />
                     <Route path='quotes/new' element={ <NewQuotePage/> } />

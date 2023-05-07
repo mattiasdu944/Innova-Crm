@@ -22,7 +22,7 @@ export const ADMIN_MENU: IMenu[] = [
     {
         icon: <FiUsers/>,
         name: 'Pacientes',
-        path: '/patients'
+        path: '/clients'
     }
 
 ];
@@ -42,7 +42,7 @@ export const EMPLOYEE_MENU: IMenu[] = [
     {
         icon: <FiUsers/>,
         name: 'Pacientes',
-        path: '/patients'
+        path: '/clients'
     }
 
 ]
