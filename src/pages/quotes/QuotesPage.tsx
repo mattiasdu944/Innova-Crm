@@ -8,7 +8,7 @@ export const QuotesPage: FC = () => {
     return (
         <>
             <Typography variant='h1' mb={2}>Tus consultas</Typography>
-            <Link to='/quotes'>
+            <Link to='/quotes/new'>
                 <Typography mb={4} color='primary.main'>Agregar consulta</Typography>
             </Link>
             <Grid container spacing={3}>
