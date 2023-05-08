@@ -11,8 +11,8 @@ interface PropsProvider{
 export const UsersProvider:FC<PropsProvider> = ({ children }) => {
 
     // ESTADOS GLOBALES
-    const [clients, setClients] = useState([] as IUser[]);
-    const [employees, setEmployees] = useState([] as IUser[]);
+    const [clients, setClients] = useState<IUser[]>([]);
+    const [employees, setEmployees] = useState<IUser[]>([]);
 
     const [error, setError] = useState(false);
     const [isLoading, setIsLoading] = useState(false)

@@ -1,10 +1,15 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Grid, Typography } from '@mui/material'
 import { CardQuote } from '../../components'
+import { QuotesContext } from '../../context'
 
 export const QuotesPage: FC = () => {
+
+    const { quotes } = useContext( QuotesContext );
+
+
     return (
         <>
             <Typography variant='h1' mb={2}>Tus consultas</Typography>
@@ -13,8 +18,8 @@ export const QuotesPage: FC = () => {
             </Link>
             <Grid container spacing={3}>
                 {
-                    [1,2,3,4,5,6].map( (item, index) => (
-                        <CardQuote key={ index }/>
+                    quotes.map( (quote, index) => (
+                        <CardQuote  quote={ quote } key={ quote.id }/>
                     ))
                 }
             </Grid>
