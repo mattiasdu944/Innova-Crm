@@ -18,7 +18,7 @@ export const QuotesPage: FC = () => {
             </Link>
             <Grid container spacing={3}>
                 {
-                    quotes.map( (quote, index) => (
+                    quotes?.map( (quote, index) => (
                         <CardQuote  quote={ quote } key={ quote.id }/>
                     ))
                 }

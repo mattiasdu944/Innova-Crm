@@ -27,7 +27,7 @@ export const ListUsers: FC<Props> = ({ users }) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {users.map((user) => (
+                        {users?.map((user) => (
                             <TableRow
                                 key={user.id}
                                 sx={{ 'td, th': { border: 0, padding: '1.5rem 1' } }}
